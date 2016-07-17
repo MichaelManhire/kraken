@@ -18,5 +18,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Michael Manhire",
-  "license": "SEE LICENSE IN style.css"
+  "license": "SEE LICENSE IN style.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/MichaelManhire/kraken.git"
+  }
 }
