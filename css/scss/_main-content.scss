@@ -1,0 +1,49 @@
+// Main Content
+////////////////////
+
+.main-content {
+	padding: 20px 15px;
+	font-family: $OpenSans;
+
+	a {
+		color: $secondary;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+
+	.page-title {
+		margin: 0 0 10px;
+	}
+}
+
+
+
+// Sidebar
+////////////////////
+
+@media screen and (min-width: 768px) {
+
+	.sidebar {
+
+		.widget {
+			margin: 0 0 30px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			h3 {
+				margin: 0 0 10px;
+			}
+
+			p {
+				margin: 0;
+			}
+		}
+
+	}
+
+}

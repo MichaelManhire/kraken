@@ -1,0 +1,180 @@
+// Top Bar
+////////////////////
+
+.top-bar {
+	background: $primary;
+
+	.top-bar-half {
+		height: 60px;
+		background: $primary;
+		color: #fff;
+		font-family: $Montserrat;
+
+		&:first-child {
+			padding: 20px 0;
+
+			.site-title {
+				@include vertical-center;
+				margin: 0;
+				padding: 0;
+			}
+		}
+
+		&:last-child {
+			height: 60px;
+			padding: 20px 0;
+
+			.cta {
+				margin: 0 0 10px;
+				text-align: right;
+			}
+
+			.widget {
+				height: 60px;
+				@include vertical-center;
+
+				address {
+					@include vertical-center;
+					font-size: 14px;
+
+					@media screen and (min-width: 768px) {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Navigation
+////////////////////
+
+.navigation {
+	margin: 0;
+	background: $secondary;
+	border: 0;
+	color: #fff;
+	font-family: $OpenSans;
+	font-size: 14px;
+
+	@media screen and (min-width: 768px) {
+		border-radius: 0;
+	}
+
+	.navigation-top-bar {
+
+		.menu-button {
+			margin: 0;
+			padding: 0;
+			border: 0;
+
+			&:hover,
+			&:focus {
+				background: $secondary;
+			}
+
+			.menu-button-row {
+				display: table-row;
+				height: 50px;
+
+				.menu-label {
+					@include vertical-center-table;
+					height: 50px;
+				}
+
+				.menu-icon {
+					@include vertical-center-table;
+					height: 50px;
+					margin: 0 0 0 5px;
+					fill: #fff;
+				}
+			}
+		}
+	}
+
+	.navigation-list-container {
+		border: 0;
+		box-shadow: none;
+
+		.navigation-list {
+			margin: 0 -15px;
+
+			a {
+				padding: 15px;
+				background: $secondary;
+				color: #fff;
+
+				&:hover,
+				&:focus {
+					background: $secondary-dark;
+					color: #fff;
+				}
+
+				@media screen and (min-width: 768px) {
+					padding: 15px 20px;
+				}
+			}
+
+			.active a,
+			.active a:hover,
+			.active a:focus {
+				background: $secondary;
+
+				&:hover,
+				&:focus {
+					background: $secondary-dark;
+					color: #fff;
+				}
+
+				@media screen and (min-width: 768px) {
+					background: $secondary;
+				}
+			}
+
+			.dropdown a {
+				background: $secondary;
+
+				&:hover,
+				&:focus {
+					background: $secondary-dark;
+					color: #fff;
+				}
+
+				.dropdown-icon {
+					margin: 0 0 0 2px;
+					fill: #fff;
+				}
+			}
+
+			.dropdown-menu {
+				padding: 0;
+
+				@media screen and (min-width: 768px) {
+					margin: 0;
+					box-shadow: none;
+					border: 0;
+				}
+
+				li {
+
+					a {
+						padding: 15px 15px 15px 20px;
+						color: #fff;
+
+						&:hover,
+						&:focus {
+							background: $secondary-dark;
+							color: #fff;
+						}
+
+						@media screen and (min-width: 768px) {
+							min-width: 0;
+							padding: 15px 20px;
+							background: $secondary;
+						}
+					}
+				}
+			}
+		}
+	}
+}

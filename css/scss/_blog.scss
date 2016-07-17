@@ -1,0 +1,56 @@
+// Posts
+.post {
+
+	&:not(.last-child) {
+		margin-bottom: 30px;
+	}
+
+	header {
+		margin-bottom: 10px;
+	}
+
+	h3 {
+		margin-bottom: 5px;
+	}
+
+	img {
+		display: none;
+
+		@media screen and (min-width: 768px) {
+			display: inline;
+		}
+	}
+}
+
+// Blog Sidebar
+@media screen and (min-width: 992px) {
+	.search-form {
+		max-width: 220px;
+	}
+}
+
+.search-field {
+	font-weight: normal;
+}
+
+.search-submit {
+	float: right;
+}
+
+// Comments
+.comment-author {
+	margin-bottom: 2px;
+}
+
+.avatar-container {
+	min-width: 74px;
+}
+
+.comment-metadata {
+	margin-bottom: 5px;
+}
+
+.submit {
+	float: right;
+	margin-top: 15px;
+}

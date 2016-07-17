@@ -1,0 +1,69 @@
+// Hero
+////////////////////
+
+.hero {
+	height: 600px;
+	background: url("../img/stock.jpg") no-repeat top center;
+	background-size: cover;
+	font-family: $Montserrat;
+	color: #fff;
+
+	.text-background {
+		margin-top: 50px;
+		padding: 40px 30px;
+		background-color: rgba(0, 0, 0, 0.7);
+		text-align: center;
+	}
+
+	.text {
+		margin: 0;
+	}
+}
+
+// Featured Items
+////////////////////
+
+.featured-items {
+	padding: 20px 0 0;
+
+	.item {
+		margin: 0 0 20px;
+
+		img {
+			display: block;
+			margin: 0 auto;
+			border-radius: 50%;
+
+			@media screen and (min-width: 768px) and (max-width: 991px) {
+				max-width: 150px;
+			}
+		}
+
+		h3 {
+			font-family: $Montserrat;
+			text-align: center;
+		}
+
+		p {
+			max-width: 300px;
+			margin: 0 auto;
+			font-family: $OpenSans;
+			text-align: center;
+		}
+	}
+}
+
+// Slogan
+////////////////////
+
+.slogan-background {
+	padding: 40px 0;
+	background: $primary;
+	font-family: $Montserrat;
+	color: #fff;
+	text-align: center;
+
+	.slogan {
+		display: block;
+	}
+}
