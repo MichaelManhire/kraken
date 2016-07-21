@@ -57,9 +57,11 @@ get_header(); ?>
 	<?php
 	$slogan = get_option( 'slogan', 'Edit the slogan on the Theme Options page!' );
 	if ( $slogan !== '' ): ?>
-		<div class="row">
-			<div class="slogan-background container-fluid">
-				<span class="slogan h2"><?php echo $slogan; ?></span>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="slogan-background">
+					<span class="slogan h2"><?php echo $slogan; ?></span>
+				</div>
 			</div>
 		</div>
 	<?php
