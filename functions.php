@@ -203,23 +203,11 @@ function kraken_theme_init() {
 		'theme-options' );
 
 	add_settings_field(
-		'header_site_name',
-		'Site name',
-		'header_site_name_callback',
-		'theme-options',
-		'header_section' );
-	add_settings_field(
 		'header_phone_number',
 		'Phone number',
 		'header_phone_number_callback',
 		'theme-options',
 		'header_section' );
-	add_settings_field(
-		'hero',
-		'Hero image URL',
-		'hero_callback',
-		'theme-options',
-		'homepage_section' );
 	add_settings_field(
 		'hero_text',
 		'Hero text overlay',
@@ -278,12 +266,6 @@ function kraken_theme_init() {
 		'feature_text_3',
 		'Third feature text',
 		'feature_text_3_callback',
-		'theme-options',
-		'homepage_section' );
-	add_settings_field(
-		'slogan',
-		'Slogan',
-		'slogan_callback',
 		'theme-options',
 		'homepage_section' );
 	add_settings_field(
@@ -385,27 +367,11 @@ function kraken_theme_init() {
 }
 add_action( 'admin_init', 'kraken_theme_init' );
 
-function header_site_name_callback() {
-	$option = get_option( 'header_site_name', get_bloginfo( 'name' ) );
-
-	$html = '<label for="header_site_name" class="screen-reader-text">Site name</label>';
-	$html .= '<input type="text" id="header_site_name" name="header_site_name" value="' . $option . '" />';
-	echo $html;
-}
-
 function header_phone_number_callback() {
 	$option = get_option( 'header_phone_number', '(123) 456-7890' );
 
 	$html = '<label for="header_phone_number" class="screen-reader-text">Header phone number</label>';
 	$html .= '<input type="tel" id="header_phone_number" name="header_phone_number" value="' . $option . '" />';
-	echo $html;
-}
-
-function hero_callback() {
-	$option = get_option( 'hero', get_template_directory_uri() . '/img/stock.jpg' );
-
-	$html = '<label for="hero" class="screen-reader-text">Hero image URL</label>';
-	$html .= '<input type="text" id="hero" name="hero" value="' . $option . '" />';
 	echo $html;
 }
 
@@ -486,14 +452,6 @@ function feature_text_3_callback() {
 
 	$html = '<label for="feature_text_3" class="screen-reader-text"></label>';
 	$html .= '<input type="text" id="feature_text_3" name="feature_text_3" value="' . $option . '" />';
-	echo $html;
-}
-
-function slogan_callback() {
-	$option = get_option( 'slogan', 'Edit the slogan on the Theme Options page!' );
-
-	$html = '<label for="slogan" class="screen-reader-text">Slogan</label>';
-	$html .= '<input type="text" id="slogan" name="slogan" value="' . $option . '" />';
 	echo $html;
 }
 
@@ -647,9 +605,19 @@ function kraken_theme_options_page() {
 }
 
 /**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Register Custom Navigation Walker.

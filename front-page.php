@@ -12,7 +12,7 @@ get_header(); ?>
 	<?php
 	$hero = get_option( 'hero', get_template_directory_uri() . '/img/stock.jpg' );
 	if ( $hero !== '' ): ?>
-		<div class="hero" style="background-image: url('<?php echo $hero; ?>');">
+		<div class="hero" style="background-image: url('<?php header_image(); ?>');">
 	<?php
 	endif; ?>
 		<?php
@@ -54,18 +54,13 @@ get_header(); ?>
 			} ?>
 		</div>
 	</div>
-	<?php
-	$slogan = get_option( 'slogan', 'Edit the slogan on the Theme Options page!' );
-	if ( $slogan !== '' ): ?>
 		<div class="container-fluid">
 			<div class="row">
 				<div class="slogan-background">
-					<span class="slogan h2"><?php echo $slogan; ?></span>
+					<span class="slogan h2"><?php bloginfo( 'description' ); ?></span>
 				</div>
 			</div>
 		</div>
-	<?php
-	endif; ?>
 	<div class="main-content container">
 		<div class="row">
 			<main class="col-sm-8">

@@ -22,13 +22,7 @@
 		<div class="top-bar">
 			<div class="container">
 				<div class="top-bar-half col-xs-6">
-					<?php
-					$header_site_name = get_option( 'header_site_name', get_bloginfo( 'name' ) );
-
-					if ( $header_site_name !== '' ): ?>
-						<h1 class="site-title"><a href="/"><?php echo $header_site_name; ?></a></h1>
-					<?php
-					endif; ?>
+					<h1 class="site-title"><a href="<?php home_url() ?>"><?php bloginfo( 'name' ); ?></a></h1>
 				</div>
 				<div class="top-bar-half col-xs-6">
 					<div class="widget cta col-sm-6 col-sm-push-6">
