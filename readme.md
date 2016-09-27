@@ -4,6 +4,12 @@ Kraken is a WordPress theme built with Bootstrap. It features easy customization
 
 ## Versions ##
 
+### 1.0.2 ###
+
+- Added theme support for custom header
+- Moved some settings from the Theme Options page to the WordPress Customizer
+- Replaced Bootstrap CSS with Bootstrap SCSS
+
 ### 1.0.1 ###
 
 - Fixed a bug with the slogan overflowing its container on smaller viewports
